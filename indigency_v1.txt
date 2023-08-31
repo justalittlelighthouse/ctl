@@ -1,0 +1,106 @@
+Title: South Carolina Indigency "Flowchart"
+Author: Jessica Vandervort
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">South Carolina Indigency Rules "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in [insert state name].</p>
+
+Q(1): Do you understand?
+A: Yes, I wish to continue.
+	Q(1.1): Including yourself, how many people are in your household? 
+	A: 1 (one)
+		Q(1.1.1): Is your annual household income less than or equal to $14,580?
+		A: Yes
+			Q(Assets): Do you have any personal assets? (For example, funds, bank accounts, property, etc.?)
+			A: Yes
+				Q(Partial): The court will likely grant you an attorney but may require you to pay some of your assets to the Office of Indigent Defense.
+			A: No
+				Q(Granted): You likely qualify for a court-appointed attorney at no-cost to you. 
+				
+		A: No
+			Q(Denied): You likely do not qualify for court-appointed counsel.
+	A: 2 (two)
+		Q(1.1.2): Is your annual household income less than or equal to $19,720?
+		A: Yes
+			Q(1.1.2.1):GOTO:Assets
+			A: Yes
+				Q(1.1.2.1.1):GOTO:Partial
+			A: No
+				Q(1.1.2.1.2):GOTO:Granted
+		A: No
+			Q(1.1.2.2):GOTO:Denied
+	A: 3 (three)
+		Q(1.1.3): Is your annual household income less than or equal to $24,860?
+		A: Yes
+			Q(1.1.3.1):GOTO:Assets
+			A: Yes
+				Q(1.1.3.1.1):GOTO:Partial
+			A: No
+				Q(1.1.3.1.2):GOTO:Granted
+		A: No
+			Q(1.1.3.2):GOTO:Denied
+	A: 4 (four)
+		Q(1.1.4): Is your annual household income less than or equal to $30,000?
+		A: Yes
+			Q(1.1.4.1):GOTO:Assets
+			A: Yes
+				Q(1.1.4.1.1):GOTO:Partial
+			A: NO
+				Q(1.1.4.1.2):GOTO:Granted
+		A: No
+			Q(1.1.4.2):GOTO:Denied
+	A: 5 (five) or more
+		Q(1.1.5): Including yourself, how many people are in your household?
+		A: 5 (five)
+			Q(1.1.5.1): Is your annual household income less than or equal to $35,140?
+			A: Yes
+				Q(1.1.5.1.1):GOTO:Assets
+				A: Yes
+					Q(1.1.5.1.1.1):GOTO:Partial
+				A: No
+					Q(1.1.5.1.1.2):GOTO:Granted
+			A: No
+				Q(1.1.5.1.2):GOTO:Denied
+		A: 6 (six)
+			Q(1.1.5.2): Is your annual household income less than or equal to $40,280?
+			A: Yes
+				Q(1.1.5.2.1):GOTO:Assets
+				A: Yes
+					Q(1.1.5.2.1.1):GOTO:Partial
+				A: No
+					Q(1.1.5.2.1.2):GOTO:Granted
+			A: No
+				Q(1.1.5.2.2):GOTO:Denied
+		A: 7 (seven)
+			Q(1.1.5.3): Is your annual household income less than or equal to $45,420?
+			A: Yes
+				Q(1.1.5.3.1):GOTO:Assets
+				A: Yes
+					Q(1.1.5.3.1.1):GOTO:Partial
+				A: No
+					Q(1.1.5.3.1.2):GOTO:Granted
+			A: No
+				Q(1.1.5.3.2):GOTO:Denied
+		A: 8 (eight)
+			Q(1.1.5.4): Is your annual household income less than or equal to $50,560?
+			A: Yes
+				Q(1.1.5.4.1):GOTO:Assets
+				A: Yes
+					Q(1.1.5.4.1.1):GOTO:Partial
+				A: No
+					Q(1.1.5.4.1.2):GOTO:Granted
+			A: No
+				Q(1.1.5.4.2):GOTO:Denied
+		A: 9 (nine) or more
+			Q(1.1.5.5): Is your annual household income less than or equal to $55,700? (Note, for each additional person in your household beyond nine, add $5,140 to this total)
+			A: Yes
+				Q(1.1.5.5.1):GOTO:Assets
+				A: Yes
+					Q(1.1.5.5.1.1):GOTO:Partial
+				A: No
+					Q(1.1.5.5.1.2):GOTO:Granted
+			A: No
+				Q(1.1.5.5.2):GOTO:Denied
+A: No, I do not. 
+	Q(1.2): Please find another resource. Thank you!

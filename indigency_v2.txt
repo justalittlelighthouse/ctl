@@ -1,0 +1,62 @@
+Title: South Carolina Indigency Calculator
+Author: Jessica Vandervort
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">South Carolina Indigency Calculator</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2023/level/2/#mission_p2">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for an appointment of counsel or fee waiver.</p>
+After:
+<script>
+function fedpov(house,income,percentage){
+	// Determines if your income is less than or equal to
+	// a percentage of the 2023 federal poverty guidelines
+	// for the contiguous United States. See
+	// https://aspe.hhs.gov/poverty-guidelines
+
+		var line = NaN;
+
+		if (house == 1) {
+			line = 14580;
+		} else if (house == 2) {
+			line = 19720;
+		} else if (house == 3) {
+			line = 24860;
+		} else if (house == 4) {
+			line = 30000;
+		} else if (house == 5) {
+			line = 35140;
+		} else if (house == 6) {
+			line = 40280;
+		} else if (house == 7) {
+			line = 45420;
+		} else if (house == 8) {
+			line = 50560;
+		} else if (house > 8) {
+			line = 50560 + (house-8)*5140;
+		}
+
+		if (income <= (line*(percentage/100))) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+</script>
+
+Q(house): How many people are in your household? (As defined by the Federal Taxation guidelines)
+X:number
+	Q(income): How much income does your household bring in per year in after-tax dollars?
+	X[javascript:if(fedpov(getvar('house'),getvar('income'),100)){goto('Asset')}else{goto('Denied')}]:number
+Q(Asset): Do you have any personal assets? (For example, funds, bank accounts, property, etc.?)
+A[javascript:if (fedpov(getvar('house'),getvar('income'),100)){ goto('Partial') } else { goto('Denied') } ]: Yes
+A[javascript:if (fedpov(getvar('house'),getvar('income'),100)){ goto('Granted') } else if (fedpov(getvar('house'),getvar('income'),100)) { goto('Denied') } else { goto('Denied') }]: No
+
+Q(Partial): The court will likely grant you an attorney but may require you to pay some of your assets to the Office of Indigent Defense.
+
+Q(Granted): You likely qualify for a court-appointed attorney at no-cost to you. 
+
+Q(Denied): You likely do not qualify for court-appointed counsel. Would you like to search for a lawyer near you, anyways?
+A:[https://www.avvo.com/find-a-lawyer] Yes.
+A: No
+	Q(5.2):GOTO:Nomore
+Q(Nomore): I think that is all I can help you with. Have a nice day!

@@ -1,0 +1,53 @@
+Title: DACA Qualification. This is a class project and should not be taken as legal advice.  
+Author: Jessica Vandervort
+Description: Answer the following questions to see if you qualify for DACA. 
+
+Q(1): Is your birthday on or after June 16, 1981?
+A: Yes
+	Q(1.1): Did you enter the United States before your 16th Birthday? 
+	A: Yes
+		Q(1.1.1): Were you in the United States on June 15, 2012? 
+		A: Yes
+			Q(1.1.1.1): Have you continuously resided in the United States since June 15, 2007? 
+			A: Yes
+				Q(1.1.1.1.1): Were you out of status on June 15, 2012?
+				A: Yes
+					Q(Felony): Have you been convicted of a felony or significant misdemeanor?
+					A: Yes
+						Q(1.1.1.1.1.1.1):GOTO:1.2
+					A: No
+						Q(Threat): Do you pose a threat to National Security or Public Safety? 
+						A: Yes
+							Q(1.1.1.1.1.1.2.1):GOTO:1.2
+						A: No
+							Q(School): Are you currently in school? 
+							A: Yes
+								Q(1.1.1.1.1.1.2.2.1): Are you 15 years old or older? 
+								A: Yes
+									Q(1.1.1.1.1.1.2.2.1.1): You are eligible!
+								A: No
+									Q(1.1.1.1.1.1.2.2.1.2): Are you currently in removal proceedings or have a final removal or VD Order?
+									A: Yes
+										Q(1.1.1.1.1.1.2.2.1.2.1):GOTO:1.1.1.1.1.1.2.2.1.1
+									A: No
+										Q(1.1.1.1.1.1.2.2.1.2.2): We will need to wait to determine your eligibility. 
+							A: No 
+								Q(1.1.1.1.1.1.2.2.2): Do you already have a high school diploma or GED? 
+								A: Yes
+									Q(1.1.1.1.1.1.2.2.2.1):GOTO:1.1.1.1.1.1.2.2.1 
+								A: No
+									Q(1.1.1.1.1.1.2.2.2.2): Are you an honorably discharged veteran of the Coast Guard or Armed Forces? 
+									A: Yes
+										Q(1.1.1.1.1.1.2.2.2.2.1):GOTO:1.1.1.1.1.1.2.2.1.1
+									A: No
+										Q(1.1.1.1.1.1.2.2.2.2.2): We will need to wait to determine your eligibility. 
+				A: No
+					Q(Secondary):GOTO:1.2
+			A: No
+				Q(1.1.1.1.2):GOTO:1.2 
+		A: No
+			Q(1.1.1.2):GOTO:1.2 
+	A: No 
+		Q(1.1.2):GOTO:1.2
+A: No
+	Q(1.2): Thank you, but you are ineligible
